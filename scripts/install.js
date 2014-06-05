@@ -54,10 +54,5 @@ q.askOne({ info: 'Would you like to be notified by email when a problem is detec
 
     get_email();
   }
-  else {
-    WatchDog.refuse(function() {
-      console.log('\nSubscription canceled, you can still enable pm2 simple monitoring via \n$ pm2 subscribe my@email.com\n');
-      process.exit(0);
-    });
-  }
+  process.exit(0);
 });
